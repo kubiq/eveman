@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span10">
+			<!--Body content-->
+			<table>
+
+				<thead>
+				<tr>
+					<td>Date</td>
+					<td>Name</td>
+					<td>Price</td>
+					<td>Quantity</td>
+					<td>Credit</td>
+					<td>Client</td>
+					<td>Station</td>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="transaction in transactions">
+					<td>{{transaction.transactionDateTime}}</td>
+					<td>{{transaction.typeName}}</td>
+					<td class="n">{{transaction.price | currency}}</td>
+					<td class="n">{{transaction.quantity}}</td>
+					<td class="n">{{transaction.price * transaction.quantity | currency}}</td>
+					<td>{{transaction.clientName}}</td>
+					<td>{{transaction.stationName}}</td>
+				</tr>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+</div>
